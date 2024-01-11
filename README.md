@@ -1,4 +1,5 @@
 # studentsite
 This is my student site
 
-[View my site](https://kccnma.github.io/jeriib)
+[View my site](https://jeriib.github.io/studentsite)
+
