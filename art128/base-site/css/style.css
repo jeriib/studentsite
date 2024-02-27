@@ -121,7 +121,8 @@ a {
 }
 
 a:hover {
-    color: #003;
+    color: rgba(0,0,153,1);
+    text-decoration: underline;
 }
 
 /* HELPERS */
@@ -153,6 +154,12 @@ a:hover {
     clear: both;
 }
 
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto
+}
+
 /* HORIZONTAL RULES */
 hr {
     border: 0;
@@ -163,38 +170,36 @@ hr {
 
 /* COMPONENTS */
 /* BUTTONS */
+.button,
 button {
     font-size: inherit;
-}
-
-button,
-a.button {
-    display: inline-block;
-    background-color: #036;
-    border: 1px solid #036;
-    color: #fff;
-    padding: 0.75em 1em;
-    border-radius: 0.32em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    border: none;
-    cursor: pointer;
     line-height: 1;
+    background-color: rgba(0,0,225,1);
+    border: 1px solid rgba(0,0,225,1);
+    color: rgba(225,225,225,1);
+    padding: 1em;
+    display: inline-block;
+    margin: .5em .5em .5em 0;
+    text-align: center;
+    border-radius: .5em;
 }
 
-button.alt,
-a.button.alt {
-    background-color: transparent;
-    border: 1px solid #036;
-    color: #036;
-}
-
-button:hover,
-a.button:hover {
-    background-color: #003;
-    color: #fff;
-    border-color: #003;
+.button:hover,
+button:hover {
+    background-color: rgba(0,0,225,1);
+    border: 1px solid rgba(0,0,225,1);
+    color: rgba(225,225,225,1);
     text-decoration: none;
+}
+
+.button.alt {
+    background-color: transparent;
+    color: rgba(0,0,153,1);
+}
+
+.button.alt:hover {
+    background-color: rgba(0,0,153,1);
+    color: rgba(225,225,225,1);
 }
 
 /* LAYOUT */
@@ -315,4 +320,73 @@ body.demo::before {
     background: rgba(0,0,0,.2);
     padding: 1em;
     text-align: center;
+}
+
+/* SITE STRUCTURE */
+
+
+/* SITE HEADER */
+.site-header {
+    padding: 1em;
+}
+
+/* ON LARGER SCREENS PALCE LOGO LEFT AND NAV RIGHT */
+@media (min-width: 768px) {
+    .site-header .container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* STYLING FOR BOTH HEADER AND FOOTER */
+.site-header a, 
+.site-footer a {
+    color: rgba(0,0,0,.8);
+}
+.site-header a:hover,
+.site-footer a:hover {
+    color: rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+/* LOGO AREA */
+
+.site-id h1 {
+    font-size: 1.5em; 
+    margin: 0;
+    padding-top: .55em;
+    text-align: center;
+}
+
+/* SITE NAV */
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em;
+}
+
+/* SECTIONS */
+section {
+    padding: 3em 0;
+}
+
+/* HERO */
+.hero  {
+    padding: 6em 4%;
+    background-color: rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.hero h1, p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
