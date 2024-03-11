@@ -86,7 +86,7 @@ p + h2,
 p + h3,
 p + h4,
 p + h5,
-p + h6, {
+p + h6 {
     margin-top: 2em;
 }
 
@@ -334,7 +334,7 @@ body.demo::before {
 @media (min-width: 768px) {
     .site-header .container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 
@@ -409,7 +409,7 @@ section {
         display: inline-block;
         cursor: pointer;
         padding: .3em .8em;
-        margin-bottom: .8em 0;
+        margin-bottom: .8em;
         border: 1px solid black;
     }
     .toggle-nav .site-nav .menu-button::selection {
@@ -420,7 +420,7 @@ section {
         text-align: center;
     }
     .toggle-nav .site-nav a:hover {
-        background-color: rgba(0,0,153,1):
+        background-color: rgba(0,0,153,1);
         color: white;
     }
     .toggle-nav[data-navstate="closed"] ul {
