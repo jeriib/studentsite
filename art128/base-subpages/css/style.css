@@ -172,7 +172,7 @@ hr {
 /* COMPONENTS */
 /* BUTTONS */
 .button,
-button {
+button, form input[type="submit"]  {
     font-size: inherit;
     line-height: 1;
     background-color: rgba(0,0,225,1);
@@ -186,7 +186,7 @@ button {
 }
 
 .button:hover,
-button:hover {
+button:hover, form input[type="submit"]:hover  {
     background-color: rgba(0,0,225,1);
     border: 1px solid rgba(0,0,225,1);
     color: rgba(225,225,225,1);
@@ -508,4 +508,41 @@ article p:first-of-type:first-letter {
     padding: .2em .4em;
     margin-right: .3em;
     float: left;
+}
+
+/* FORMS */
+
+form {
+    max-width: 600px;
+    margin: 2 auto;
+}
+
+form label,
+form input,
+form textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+}
+
+form label {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+form input[type="text"],
+form textarea {
+    border: 1px solid #ccc;
+    padding: .5em;
+    color: #666;
+}
+
+form textarea {
+    min-height: 10em;
+}
+
+form input[type="submit"] {
+    width: auto;
+    margin-top: 1em;
 }
